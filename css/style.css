@@ -5327,6 +5327,22 @@ input[type="button"].btn-block {
   color: #fff;
 }
 
+/* Hide text in phone and smaller logo */
+@media (max-width: 768px) {
+  .navbar-brand span {
+    /* Assuming you wrap the text in a <span> */
+    display: none;
+    /* Hide the text */
+  }
+
+  .navbar-brand img {
+    width: 30px;
+    /* Set logo width */
+    height: 30px;
+    /* Set logo height */
+  }
+}
+
 .card {
   position: relative;
   display: -webkit-box;
@@ -11789,7 +11805,7 @@ h5,
 }
 
 .ftco-navbar-light {
-  background: transparent !important;
+  background: #ffffffa1 !important;
   position: absolute;
   top: 10px;
   left: 0;
