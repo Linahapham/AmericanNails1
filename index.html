@@ -81,7 +81,8 @@
 		</div>
 	</section>
 
-	<section class="ftco-section ftco-intro" style="background-image: url(images/intro.jpg);">
+	<section class="ftco-section ftco-intro"
+		style="background-image: url(images/ellie-eshaghi-DtoWpHt2_d8-unsplash.jpg);">
 		<div class="container">
 			<div class="row justify-content-end">
 				<div class="col-md-6">
@@ -711,8 +712,84 @@
 		</div>
 	</section>-->
 
-	<!--Gallery-->
+
+	<!--Filtered Gallery-->
+	<!-- Filter Buttons -->
+	<div class="text-center mb-4">
+		<button class="btn btn-primary filter-btn" onclick="filterSelection('all')">Show All</button>
+		<button class="btn btn-secondary filter-btn" onclick="filterSelection('filter1')">Filter 1</button>
+		<button class="btn btn-secondary filter-btn" onclick="filterSelection('filter2')">Filter 2</button>
+	</div>
+
+	<!-- Gallery -->
 	<section class="ftco-gallery ftco-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 ftco-animate filter-item filter1">
+					<a href="images/g-1.jpeg" class="gallery image-popup img d-flex align-items-center"
+						style="background-image: url(images/g-1.jpeg);">
+						<div class="icon mb-4 d-flex align-items-center justify-content-center">
+							<span class="icon-instagram"></span>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3 ftco-animate filter-item filter1">
+					<a href="images/g-2.jpeg" class="gallery image-popup img d-flex align-items-center"
+						style="background-image: url(images/g-2.jpeg);">
+						<div class="icon mb-4 d-flex align-items-center justify-content-center">
+							<span class="icon-instagram"></span>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3 ftco-animate filter-item filter2">
+					<a href="images/g-3.jpeg" class="gallery image-popup img d-flex align-items-center"
+						style="background-image: url(images/g-3.jpeg);">
+						<div class="icon mb-4 d-flex align-items-center justify-content-center">
+							<span class="icon-instagram"></span>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3 ftco-animate filter-item filter2">
+					<a href="images/g-4.jpeg" class="gallery image-popup img d-flex align-items-center"
+						style="background-image: url(images/g-4.jpeg);">
+						<div class="icon mb-4 d-flex align-items-center justify-content-center">
+							<span class="icon-instagram"></span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<!-- Add more rows as needed -->
+		</div>
+	</section>
+
+	<!-- JavaScript for Filtering -->
+	<script>
+		function filterSelection(category) {
+			var items = document.getElementsByClassName('filter-item');
+			if (category == 'all') category = '';
+
+			for (var i = 0; i < items.length; i++) {
+				items[i].style.display = 'none'; // Hide all items
+				if (items[i].className.indexOf(category) > -1) {
+					items[i].style.display = 'block'; // Show items that match the filter
+				}
+			}
+		}
+
+		// JavaScript to add 'active' class to the clicked button
+		var btns = document.getElementsByClassName("filter-btn");
+		for (var i = 0; i < btns.length; i++) {
+			btns[i].addEventListener("click", function () {
+				var current = document.getElementsByClassName("active");
+				if (current.length > 0) current[0].className = current[0].className.replace(" active", "");
+				this.className += " active";
+			});
+		}
+	</script>
+
+
+	<!--Gallery-->
+	<!-- <section class="ftco-gallery ftco-section">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-3">
 				<div class="col-md-7 heading-section ftco-animate text-center">
@@ -789,10 +866,10 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<!--Booksy Embed-->
-	<section class="ftco-counter img" id="section-counter" style="background-image: url(images/bg_3.jpg);"
+	<section class="ftco-counter img" id="section-counter" style="background-image: url(images/bg_test1.png);"
 		data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
