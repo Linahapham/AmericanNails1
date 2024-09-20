@@ -628,6 +628,32 @@ pre code {
   margin-left: -15px;
 }
 
+/* Gallery filtering  */
+/* Filtered items will be hidden by default */
+.filter-item {
+  display: none;
+}
+
+.filter-btn.active {
+  color: red;
+}
+
+/* Active filter items will be shown and respect the flexbox layout */
+.filter-item.active {
+  display: block;
+  flex-basis: 23%;
+  /* Adjust based on the desired image width */
+  margin: 1%;
+}
+
+/* Make sure the image container sizes properly */
+.img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
@@ -2942,7 +2968,7 @@ fieldset:disabled a.btn {
 .btn-primary:not(:disabled):not(.disabled):active,
 .btn-primary:not(:disabled):not(.disabled).active,
 .show>.btn-primary.dropdown-toggle {
-  color: #fff;
+  /* color: #fff; */
   background-color: #0062cc;
   border-color: #005cbf;
 }
