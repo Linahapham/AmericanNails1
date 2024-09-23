@@ -628,7 +628,7 @@ pre code {
   margin-left: -15px;
 }
 
-/* Gallery filtering  */
+/* Gallery filtering */
 /* Filtered items will be hidden by default */
 .filter-item {
   display: none;
@@ -646,6 +646,14 @@ pre code {
   margin: 1%;
 }
 
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+  .filter-item.active {
+    flex-basis: 100%; /* Full width on mobile */
+    margin: 0 0 20px 0; /* Add bottom margin for spacing */
+  }
+}
+
 /* Make sure the image container sizes properly */
 .img {
   width: 100%;
@@ -659,11 +667,12 @@ pre code {
   margin-left: 0;
 }
 
-.no-gutters>.col,
-.no-gutters>[class*="col-"] {
+.no-gutters > .col,
+.no-gutters > [class*="col-"] {
   padding-right: 0;
   padding-left: 0;
 }
+
 
 .col-1,
 .col-2,
@@ -14017,3 +14026,4 @@ textarea.form-control {
     stroke-dashoffset: -136px;
   }
 }
+
