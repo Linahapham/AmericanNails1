@@ -104,11 +104,9 @@
         <!--Contact form-->
         <div class="col-md-1"></div>
         <div class="col-md-6 ftco-animate">
-          <form id="myForm"class="contact-form">
-
+          <form id="form"class="contact-form">
+            <div class="row font" id="warning-message" style="margin-bottom: 16px;"></div>
             <div class="row">
-              <div class="font" id="warning-message" style="margin-bottom: 16px;"></div>
-
               <div class="col-md-6">
                 <div class="form-group">
                   <input type="text" id="name" class="form-control" placeholder="Your Name" required>
@@ -127,7 +125,7 @@
               <textarea id="message" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
             </div>
             <div class="form-group">
-              <button id="submit" onclick="sendMail()" class="btn btn-primary py-3 px-5">Send Message</button>
+              <button id="submit" type="button" onclick="sendMail()" class="btn btn-primary py-3 px-5">Send Message</button>
             </div>
 
           </form>
