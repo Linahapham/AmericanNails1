@@ -42,6 +42,22 @@
   box-sizing: border-box;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
