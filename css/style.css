@@ -55,7 +55,6 @@ body, html {
 
 img, video, iframe {
   max-width: 100%;
-  height: auto;
 }
 
 html {
@@ -13038,17 +13037,21 @@ textarea.form-control {
   color: #fff;
 }
 
-#map {
+.map {
   width: 100%;
 }
 
-#map.map {
-  height: 400px;
+.map {
+  height: 100%;
 }
 
 @media (max-width: 991.98px) {
-  #map {
-    height: 300px;
+  .map {
+    height: 100%;
+  }
+
+  iframe{
+    height: 400px;
   }
 }
 
