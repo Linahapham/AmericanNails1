@@ -12937,6 +12937,18 @@ textarea.form-control {
 }
 
 .ftco-section {
+  padding: 7em 0;
+  position: relative;
+  
+}
+
+@media (max-width: 767.98px) {
+  .ftco-section {
+    padding: 6em 0;
+  }
+} 
+
+.pricelist{
   position: relative;
   background-size: contain;
   background-position: top;
@@ -12948,13 +12960,13 @@ textarea.form-control {
 }
 
 @media (max-width: 768px) {
-  .ftco-section {
+  .pricelist {
     min-height: 700px; /* Adjust for tablet */
   }
 }
 
 @media (max-width: 480px) {
-  .ftco-section {
+  .pricelist {
     min-height: 650px; /* Adjust for mobile */
   }
 }
