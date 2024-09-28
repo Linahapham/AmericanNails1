@@ -12178,6 +12178,10 @@ h5,
 }
 
 @media (max-width: 991.98px) {
+  .hero-wrap{
+    margin-bottom: 100px;
+
+  }
   .hero-wrap .overlay {
     width: 100%;
   }
@@ -12937,14 +12941,14 @@ textarea.form-control {
 }
 
 .ftco-section {
-  padding: 7em 0;
+  padding: 3em 0;
   position: relative;
   
 }
 
 @media (max-width: 767.98px) {
   .ftco-section {
-    padding: 6em 0;
+    padding: 2em 0;
   }
 } 
 
