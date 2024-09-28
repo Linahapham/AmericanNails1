@@ -12937,13 +12937,25 @@ textarea.form-control {
 }
 
 .ftco-section {
-  padding: 7em 0;
   position: relative;
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  min-height: 2000px; /* Adjust for desktop */
+  margin-bottom: 20px;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   .ftco-section {
-    padding: 6em 0;
+    min-height: 700px; /* Adjust for tablet */
+  }
+}
+
+@media (max-width: 480px) {
+  .ftco-section {
+    min-height: 650px; /* Adjust for mobile */
   }
 }
 
