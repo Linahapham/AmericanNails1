@@ -11783,7 +11783,7 @@ body {
   font-size: 18px;
   line-height: 1.8;
   font-weight: 300;
-  color: #a6a6a6;
+  color: #343a40;
 }
 
 body.menu-show {
@@ -12192,7 +12192,7 @@ h5,
 }
 
 .hero-wrap .slider-text {
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .hero-wrap .slider-text .icon {
@@ -14073,3 +14073,25 @@ textarea.form-control {
   }
 }
 
+.section-with-overlay {
+  position: relative; /* Make the section a positioned element */
+  z-index: 1; /* Ensure content stays above the overlay */
+}
+
+.section-with-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5); /* Black with 50% transparency */
+  z-index: -1; /* Send the overlay behind the section content */
+}
+
+@media (max-width: 700px) {
+  .section-with-overlay::before {
+    background-color: rgba(255, 255, 255, 0.8); /* Black with 50% transparency */
+
+  }
+}
